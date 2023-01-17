@@ -1,26 +1,60 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface State {
+  datum: Date;
 }
-
+class App extends Component<{}, State> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      datum: new Date()
+    }
+    setInterval(() => {
+      this.setState({
+        datum: new Date()
+      });
+    }, 1000);
+  }
+  render() {
+    return <div>
+      <section id="bekeres">
+      <h2>BMI kalkulátor</h2>
+      <p>Kérem adja meg a magasságát centiméterben: <input type="number" id="magassag"></input></p>
+      <p>Kérem adja meg a testsúlyát kilogrammban: <input type="number" id="suly"></input></p>
+      <button id="szamitas">Számítás</button>
+  </section>    
+  <section>
+      <h2 id="eredmeny">Az ön BMI értéke: </h2>
+      <table>
+          <tr>
+              <td className='oszlop1'></td>
+              <td className='oszlop2'></td>
+          </tr>
+          <tr>
+              <td className='oszlop1'></td>
+              <td className='oszlop2'></td>
+          </tr>
+          <tr>
+              <td className='oszlop1'></td>
+              <td className='oszlop1'></td>
+          </tr>
+          <tr>
+              <td className='oszlop1'></td>
+              <td className='oszlop2'></td>
+          </tr>
+          <tr>
+              <td className='oszlop1'></td>
+              <td className='oszlop2'></td>
+          </tr>
+          <tr>
+              <td className='oszlop1'></td>
+              <td className='oszlop2'></td>
+          </tr>
+      </table>
+      <h2>Az ön ideális testtömege: </h2>
+  </section>
+</div>
+  }
+}
 export default App;
