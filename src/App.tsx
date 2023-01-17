@@ -8,6 +8,7 @@ interface State {
   idealisMinTomeg: number;
   idealisMaxTomeg: number;
 }
+
 class App extends Component<{}, State> {
   constructor(props: {}) {
     super(props);

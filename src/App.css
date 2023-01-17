@@ -36,14 +36,32 @@
     transform: rotate(360deg);
   }
 }
+div {
+  margin: 10px;
+}
+p {
+  margin-left: 5px ;
+}
+input {
+  padding-right: 10 px;
+}
 
 h2 {
   color: orange;
 }
 
+table{
+  border-collapse: collapse;
+  width: 400px;
+  margin-left: 30px;
+  
+}
+
 .oszlop1 {
   font-weight: bold;
   border: 0px;
+  text-align: center;
+  
 }
 
 .oszlop2 {
@@ -54,6 +72,18 @@ h2 {
 #bekeres, .kiemelt{
   background-color: orange;
   color: white;
+  border-radius: 5px;
+  
 }
+#bekeres {
+border-radius: 20px;
+}
+ button{
+  border-radius: 5px;
+  border: 3px;
+  margin: 10px;
+ }
+
+
 
 
