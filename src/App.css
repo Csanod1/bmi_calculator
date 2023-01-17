@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+h2 {
+  color: orange;
+}
+
+.oszlop1 {
+  font-weight: bold;
+  border: 0px;
+}
+
+.oszlop2 {
+  text-transform: capitalize;
+  border: 0px;
+}
+
+#bekeres, .kiemelt{
+  background-color: orange;
+  color: white;
+}
+
+
